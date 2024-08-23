@@ -46,7 +46,7 @@ def update_cloudflare_dns(ip_list, api_token, zone_id, subdomain, domain):
             "type": "A",
             "name": record_name,
             "content": ip,
-            "ttl": 1,
+            "ttl": 60,
             "proxied": False
         }
         response = requests.post(f'https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records', json=data, headers=headers)
@@ -60,8 +60,8 @@ if __name__ == "__main__":
     
     # 示例URL和子域名对应的IP列表
     subdomain_ip_mapping = {
-        'bestcf': 'https://ipdb.030101.xyz/api/bestcf.txt',
-        'bestproxy': 'https://ipdb.030101.xyz/api/bestproxy.txt',
+        'dns': 'https://raw.githubusercontent.com/leung7963/cfips/main/ip.txt',
+        'proxyip': 'https://raw.githubusercontent.com/leung7963/iptest/main/proxyip.txt',
         # 添加更多子域名和对应的IP列表URL
     }
     
