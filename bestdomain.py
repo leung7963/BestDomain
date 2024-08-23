@@ -60,7 +60,7 @@ if __name__ == "__main__":
     
     # 示例URL和子域名对应的IP列表
     subdomain_ip_mapping = {
-        'dns': 'https://raw.githubusercontent.com/leung7963/cfips/main/ip.txt',
+        'dns': 'https://raw.githubusercontent.com/leung7963/CFIPS/main/ip.txt',
         'proxyip': 'https://raw.githubusercontent.com/leung7963/iptest/main/proxyip.txt',
         # 添加更多子域名和对应的IP列表URL
     }
