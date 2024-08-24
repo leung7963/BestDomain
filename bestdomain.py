@@ -46,7 +46,7 @@ def update_cloudflare_dns(ip_list, api_token, zone_id, subdomain, domain):
             "type": "A",
             "name": record_name,
             "content": ip,
-            "ttl": 1,
+            "ttl": 60,
             "proxied": False
         }
         response = requests.post(f'https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records', json=data, headers=headers)
